@@ -12,31 +12,31 @@
         },
         "networkSecurityGroupName": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStudio-nsg-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[concat('win11vs-nsg-', uniqueString(resourceGroup().id))]"
         },
         "virtualNetworkName": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStudio-vnet-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "Win11vs-vnet"
         },
         "publicIpAddressName1": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStudio-ip-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[concat('win11vs-ip-', uniqueString(resourceGroup().id))]"
         },
         "virtualMachineName": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStudio-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[concat('win11vs-', uniqueString(resourceGroup().id))]"
         },
         "virtualMachineName1": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStudio-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[concat('win11vs-', uniqueString(resourceGroup().id))]"
         },
         "virtualMachineComputerName1": {
             "type": "string",
-            "defaultValue": "[concat('Win11VisualStud-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[substring(concat('win', uniqueString(resourceGroup().id)), 0, 15)]"
         },
         "virtualMachineRG": {
             "type": "string",
-            "defaultValue": "[concat('ARMSnapshot-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[concat('Win11vs-', uniqueString(resourceGroup().id))]"
         },
         "networkSecurityGroupRules": {
             "type": "array",
