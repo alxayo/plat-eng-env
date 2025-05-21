@@ -3,94 +3,146 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "northeurope"
         },
         "networkInterfaceName1": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "win11visualstudio478_z1"
         },
         "networkSecurityGroupName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStudio-nsg"
         },
         "networkSecurityGroupRules": {
-            "type": "array"
+            "type": "array",
+            "defaultValue": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
         },
         "subnetName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "default"
         },
         "virtualNetworkName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStudio-vnet"
         },
         "addressPrefixes": {
-            "type": "array"
+            "type": "array",
+            "defaultValue": [
+                "10.1.0.0/16"
+            ]
         },
         "subnets": {
-            "type": "array"
+            "type": "array",
+            "defaultValue": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.1.0.0/24"
+                    }
+                }
+            ]
         },
         "publicIpAddressName1": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStudio-ip"
         },
         "publicIpAddressType": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Static"
         },
         "publicIpAddressSku": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Standard"
         },
         "pipDeleteOption": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Detach"
         },
         "virtualMachineName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStudio"
         },
         "virtualMachineName1": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStudio"
         },
         "virtualMachineComputerName1": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Win11VisualStud"
         },
         "virtualMachineRG": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "ARMSnapshot"
         },
         "osDiskType": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Premium_LRS"
         },
         "osDiskDeleteOption": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Delete"
         },
         "virtualMachineSize": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Standard_E4s_v3"
         },
         "nicDeleteOption": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "Detach"
         },
         "hibernationEnabled": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": false
         },
         "adminUsername": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "vmuser"
         },
         "adminPassword": {
             "type": "securestring"
         },
         "patchMode": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "AutomaticByOS"
         },
         "enablePeriodicAssessment": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "ImageDefault"
         },
         "enableHotpatching": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": false
         },
         "securityType": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "TrustedLaunch"
         },
         "secureBoot": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "vTPM": {
-            "type": "bool"
+            "type": "bool",
+            "defaultValue": true
         },
         "virtualMachine1Zone": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "1"
         }
     },
     "variables": {
