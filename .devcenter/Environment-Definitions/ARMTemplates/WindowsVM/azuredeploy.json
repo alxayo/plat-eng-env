@@ -8,11 +8,35 @@
         },
         "networkInterfaceName1": {
             "type": "string",
-            "defaultValue": "win11visualstudio478_z1"
+            "defaultValue": "[concat('win11vsnic', uniqueString(resourceGroup().id))]"
         },
         "networkSecurityGroupName": {
             "type": "string",
-            "defaultValue": "Win11VisualStudio-nsg"
+            "defaultValue": "[concat('Win11VisualStudio-nsg-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualNetworkName": {
+            "type": "string",
+            "defaultValue": "[concat('Win11VisualStudio-vnet-', uniqueString(resourceGroup().id))]"
+        },
+        "publicIpAddressName1": {
+            "type": "string",
+            "defaultValue": "[concat('Win11VisualStudio-ip-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineName": {
+            "type": "string",
+            "defaultValue": "[concat('Win11VisualStudio-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineName1": {
+            "type": "string",
+            "defaultValue": "[concat('Win11VisualStudio-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineComputerName1": {
+            "type": "string",
+            "defaultValue": "[concat('Win11VisualStud-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineRG": {
+            "type": "string",
+            "defaultValue": "[concat('ARMSnapshot-', uniqueString(resourceGroup().id))]"
         },
         "networkSecurityGroupRules": {
             "type": "array",
@@ -36,10 +60,6 @@
             "type": "string",
             "defaultValue": "default"
         },
-        "virtualNetworkName": {
-            "type": "string",
-            "defaultValue": "Win11VisualStudio-vnet"
-        },
         "addressPrefixes": {
             "type": "array",
             "defaultValue": [
@@ -57,10 +77,6 @@
                 }
             ]
         },
-        "publicIpAddressName1": {
-            "type": "string",
-            "defaultValue": "Win11VisualStudio-ip"
-        },
         "publicIpAddressType": {
             "type": "string",
             "defaultValue": "Static"
@@ -72,22 +88,6 @@
         "pipDeleteOption": {
             "type": "string",
             "defaultValue": "Detach"
-        },
-        "virtualMachineName": {
-            "type": "string",
-            "defaultValue": "Win11VisualStudio"
-        },
-        "virtualMachineName1": {
-            "type": "string",
-            "defaultValue": "Win11VisualStudio"
-        },
-        "virtualMachineComputerName1": {
-            "type": "string",
-            "defaultValue": "Win11VisualStud"
-        },
-        "virtualMachineRG": {
-            "type": "string",
-            "defaultValue": "ARMSnapshot"
         },
         "osDiskType": {
             "type": "string",
