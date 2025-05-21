@@ -10,4 +10,3 @@ parameters:
     description: The password for the Windows VM administrator account.
     type: string
     required: true
-    secret: true
