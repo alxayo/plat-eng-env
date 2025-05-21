@@ -1,4 +1,4 @@
-name: windows-vm-environment
+name: ubuntu-vm-environment
 version: 1.0.0
 summary: Azure Ubuntu Minimal 22.04 TLS Environment
 description:  Deploys a buntu Minimal 22.04 TLS with SSH as ARM template.
