@@ -32,7 +32,7 @@
         },
         "virtualMachineComputerName1": {
             "type": "string",
-            "defaultValue": "[concat('UbuntuVM-', uniqueString(resourceGroup().id))]"
+            "defaultValue": "[substring(concat('UbuntuVM', uniqueString(resourceGroup().id)), 0, 15)]"
         },
         "virtualMachineRG": {
             "type": "string",
