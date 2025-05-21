@@ -2,7 +2,6 @@ name: windows-vm-environment
 description: Deploys a Windows 11 VM with Visual Studio using ARM template.
 resource:
   templatePath: azuredeploy.json
-  parametersPath: azuredeploy.parameters.json
 parameters:
   - id: adminPassword
     displayName: Admin Password
