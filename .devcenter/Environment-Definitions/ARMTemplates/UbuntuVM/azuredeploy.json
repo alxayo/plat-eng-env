@@ -8,15 +8,39 @@
         },
         "networkInterfaceName1": {
             "type": "string",
-            "defaultValue": "ubuntuvm681_z1"
+            "defaultValue": "[concat('ubuntuvmnic', uniqueString(resourceGroup().id), '_z1')]"
+        },
+        "networkSecurityGroupName": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-nsg-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualNetworkName": {
+            "type": "string",
+            "defaultValue": "UbuntuVM-vnet"
+        },
+        "publicIpAddressName1": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-ip-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineName": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineName1": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineComputerName1": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-', uniqueString(resourceGroup().id))]"
+        },
+        "virtualMachineRG": {
+            "type": "string",
+            "defaultValue": "[concat('UbuntuVM-', uniqueString(resourceGroup().id))]"
         },
         "enableAcceleratedNetworking": {
             "type": "bool",
             "defaultValue": true
-        },
-        "networkSecurityGroupName": {
-            "type": "string",
-            "defaultValue": "UbuntuVM-nsg"
         },
         "networkSecurityGroupRules": {
             "type": "array",
@@ -40,10 +64,6 @@
             "type": "string",
             "defaultValue": "default"
         },
-        "virtualNetworkName": {
-            "type": "string",
-            "defaultValue": "UbuntuVM-vnet"
-        },
         "addressPrefixes": {
             "type": "array",
             "defaultValue": [
@@ -61,10 +81,6 @@
                 }
             ]
         },
-        "publicIpAddressName1": {
-            "type": "string",
-            "defaultValue": "UbuntuVM-ip"
-        },
         "publicIpAddressType": {
             "type": "string",
             "defaultValue": "Static"
@@ -76,22 +92,6 @@
         "pipDeleteOption": {
             "type": "string",
             "defaultValue": "Detach"
-        },
-        "virtualMachineName": {
-            "type": "string",
-            "defaultValue": "UbuntuVM"
-        },
-        "virtualMachineName1": {
-            "type": "string",
-            "defaultValue": "UbuntuVM"
-        },
-        "virtualMachineComputerName1": {
-            "type": "string",
-            "defaultValue": "UbuntuVM"
-        },
-        "virtualMachineRG": {
-            "type": "string",
-            "defaultValue": "UbuntuVM"
         },
         "osDiskType": {
             "type": "string",
