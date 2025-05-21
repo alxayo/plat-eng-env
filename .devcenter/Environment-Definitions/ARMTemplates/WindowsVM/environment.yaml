@@ -6,7 +6,7 @@ runner: ARM
 templatePath: azuredeploy.json
 parameters:
   - id: adminPassword
-    displayName: Admin Password
+    name: Admin Password
     description: The password for the Windows VM administrator account.
     type: string
     required: true
