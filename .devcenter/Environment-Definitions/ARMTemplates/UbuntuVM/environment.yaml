@@ -1,12 +1,12 @@
 name: ubuntu-vm-environment
 version: 1.0.0
 summary: Azure Ubuntu Minimal 22.04 TLS Environment
-description:  Deploys a buntu Minimal 22.04 TLS with SSH as ARM template.
+description:  Deploys an ubuntu Minimal 22.04 TLS with SSH as ARM template.
 runner: ARM
 templatePath: azuredeploy.json
 parameters:
   - id: adminPassword
-    name: Admin Password
+    name: Admin Password (please insert 8 or more characters including symbuls ! @ \# $ % ^ )
     description: The password for the ubuntu SSH.
     type: string
     required: true
