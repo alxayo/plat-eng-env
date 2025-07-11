@@ -4,3 +4,13 @@ summary: Azure Zero to Hero Environment
 description:  Step by step Azure VM ARM template.
 runner: ARM
 templatePath: azuredeploy.json
+parameters:
+  - id: Template Type
+    name: Type of template to be deployed 
+    description: Choose of the the demplete types to be deployed 
+    type: string
+    required: true
+    allowed:
+      - "python"
+      - "nodejs"
+      - "java"
