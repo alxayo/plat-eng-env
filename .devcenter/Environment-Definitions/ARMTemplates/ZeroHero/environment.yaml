@@ -1,6 +1,6 @@
 name: zero-hero-environment
 version: 1.0.0
-summary: Azure Zero to Hero Environment
+summary: Azure Zero to Hero Environment 1
 description:  Step by step Azure VM ARM template.
 runner: ARM
 templatePath: azuredeploy.json
