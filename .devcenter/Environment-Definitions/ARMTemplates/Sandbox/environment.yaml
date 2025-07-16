@@ -1,5 +1,5 @@
 name: Sandbox
 summary: Sandbox environment
 description: Deploys a sandbox environment
-runner: ARM
+runner: "xayoacr.azurecr.io/ade:latest"
 templatePath: azuredeploy.json
