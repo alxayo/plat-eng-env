@@ -5,7 +5,7 @@ description:  Step by step Azure VM ARM template.
 runner: xayoacr.azurecr.io/ade:latest
 templatePath: azuredeploy.json
 parameters:
-  - id: Template Type
+  - id: templateType
     name: Type of template to be deployed 
     description: Choose of the the demplete types to be deployed 
     type: string
